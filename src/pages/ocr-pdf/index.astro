@@ -1,4 +1,9 @@
 ---
 import OcrPage from '@components/OcrPage.astro';
+import { CONFIG } from '@lib/config';
+
+export function getStaticPaths() {
+    return CONFIG.locals.map((locale) => ({ params: { locale } }));
+}
 ---
 <OcrPage />
