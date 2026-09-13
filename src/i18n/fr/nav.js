@@ -1,0 +1,46 @@
+export default {
+    editor: {
+        name: 'Éditeur',
+        title: 'Éditeur de Photos',
+    },
+    beautifier: {
+        name: 'Embellisseur',
+        title: "Embellisseur de Captures d'Écran",
+    },
+    rounded: {
+        name: 'Arrondi',
+        title: 'Photo vers Arrondie',
+    },
+    remover: {
+        name: 'Supprimeur',
+        title: "Supprimeur d'Arrière-Plan de Photo",
+    },
+    blurBackground: {
+        name: 'Flou',
+        title: 'Flouter l’arrière-plan en ligne',
+    },
+    compressor: {
+        name: 'Compresseur',
+        title: "Compresseur d'Images",
+    },
+    longImage: {
+        name: 'Image longue',
+        title: "Créateur d'image longue",
+    },
+    videoConvert: {
+        name: 'Video',
+        title: 'Video Convert',
+    },
+    convert: {
+        name: 'Convert',
+        title: 'Image Convert'
+    },
+    viewer: {
+        name: 'Viewer',
+        title: 'Office Viewer'
+    },
+    screenshot: {
+        name: 'capture d\'écran',
+        title: 'prendre une capture d\'écran'
+    }
+};
