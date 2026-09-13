@@ -1,4 +1,8 @@
 export default {
+    poweredByPre: 'Konversi video ditenagai oleh ',
+    poweredByMid: '. Model interaksi diadaptasi dari ',
+    poweredByPost: '.',
+
     title: 'GIF Maker, Video ke GIF & MP4 ke GIF Converter | pic-tool',
     description: 'Buat GIF online, konversi video ke GIF, MP4 ke GIF, kompres video, ubah speed, ekstrak audio, crop, trim, dan jalankan FFmpeg lokal.',
     keywords: 'gif maker, video ke gif, mp4 ke gif, gif maker online, konverter video, ffmpeg wasm, kompres video, trim video, ekstrak audio',
