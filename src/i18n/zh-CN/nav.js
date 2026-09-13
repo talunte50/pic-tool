@@ -36,8 +36,8 @@ export default {
         title: '图片格式转换',
     },
     viewer: {
-        name: 'Viewer',
-        title: 'Office Viewer',
+        name: '文档查看',
+        title: 'Office 文档查看',
     },
     screenshot: {
         name: '截图',
