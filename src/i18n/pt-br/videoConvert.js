@@ -1,4 +1,8 @@
 export default {
+    poweredByPre: 'Conversão de vídeo com ',
+    poweredByMid: '. Modelo de interação adaptado de ',
+    poweredByPost: '.',
+
     title: 'Criador de GIF, Vídeo para GIF e MP4 para GIF | pic-tool',
     description: 'Crie GIF online, converta vídeo para GIF, MP4 para GIF, comprima vídeo, altere velocidade, extraia áudio, corte e rode FFmpeg localmente no navegador.',
     keywords: 'criador de gif, video para gif, mp4 para gif, gif maker online, conversor de video, ffmpeg wasm, comprimir video, cortar video, extrair audio de video',
