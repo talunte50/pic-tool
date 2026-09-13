@@ -1,0 +1,28 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import RuScreenshotClusterPage from '@components/RuScreenshotClusterPage.astro';
+import { ruScreenshotClusterPages } from '@lib/ruScreenshotClusterPages';
+import { CONFIG } from '@lib/config';
+
+export function getStaticPaths() {
+    return CONFIG.locals.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+if (locale !== 'ru') {
+    return Astro.redirect('/ru/take-a-screenshot', 301);
+}
+
+const page = ruScreenshotClusterPages.howToScreenshot;
+---
+
+<Layout title={page.title} description={page.description} keywords={page.keywords} languageAlternates={false}>
+    <main class="relative overflow-hidden min-h-screen flex flex-col bg-[radial-gradient(60%_40%_at_50%_0%,rgba(79,70,229,0.10),transparent_70%)]">
+
+        <Header />
+        <RuScreenshotClusterPage page={page} />
+        <Footer showLanguageSwitcher={false} />
+    </main>
+</Layout>
