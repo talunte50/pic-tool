@@ -2,6 +2,9 @@ import en from '../en/videoConvert';
 
 export default {
     ...en,
+    poweredByPre: 'Chuyển đổi video được hỗ trợ bởi ',
+    poweredByMid: '. Mô hình tương tác được điều chỉnh từ ',
+    poweredByPost: '.',
     title: 'Tạo GIF, Video to GIF và MP4 to GIF | pic-tool',
     description: 'Công cụ tạo GIF miễn phí và chuyển video sang GIF. Chuyển MP4 sang GIF, nén video, đổi tốc độ, trích xuất âm thanh, cắt khung và chạy FFmpeg trong trình duyệt.',
     keywords: 'gif maker, tạo gif, video to gif, video sang gif, mp4 to gif, mp4 sang gif, chuyển đổi video, ffmpeg wasm, nén video, cắt video, trích xuất âm thanh từ video',
