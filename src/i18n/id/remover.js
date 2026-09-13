@@ -1,4 +1,8 @@
 export default {
+    localBadgePre: '🚧 Berjalan 100% secara lokal di browser Anda melalui ',
+    localBadgeMid: ' (WebGPU / WASM). Model: ',
+    localBadgePost: '. Anda dapat menyempurnakan tepi dengan kuas dan mengganti latar preset.',
+
     title: 'Hapus Background Gambar Online Gratis | pic-tool',
     description: 'Hapus background foto otomatis dan buat gambar transparan di browser. Cepat, gratis, dan tanpa daftar.',
     tips: 'Tambahkan gambar untuk menghapus atau mengganti background',
