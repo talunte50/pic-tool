@@ -1,3 +1,22 @@
 ---
+import { getCollection } from 'astro:content';
+import { CONFIG } from '@lib/config';
+
+export async function getStaticPaths() {
+    const posts = await getCollection('blog', ({ data }) => !data.draft);
+    const slugs = posts.map(post => post.slug);
+    const paths = [];
+    for (const locale of CONFIG.locals) {
+        for (const slug of slugs) {
+            paths.push({ params: { locale, slug } });
+        }
+    }
+    // 如果没有 blog 文章，至少保证 14 个 locale 的占位路径，避免路由完全缺失
+    if (slugs.length === 0) {
+        return CONFIG.locals.map(locale => ({ params: { locale, slug: '' } }));
+    }
+    return paths;
+}
+
 return Astro.redirect(`/blog/${Astro.params.slug}/${Astro.url.search}`, 301);
 ---
