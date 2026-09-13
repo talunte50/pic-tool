@@ -28,12 +28,15 @@
     }
 
     // same path under a different locale
+    // 注意：必须用 locales 里的原始大小写（如 zh-CN），不能 toLowerCase()。
+    // EdgeOne 静态托管区分大小写，/zh-cn/ 是 404，只有 /zh-CN/ 才存在。
     function buildHref(pathname, targetLocale) {
+      if (!targetLocale || locales.indexOf(targetLocale) === -1) return pathname;
       var parts = pathname.split('/').filter(Boolean);
       var first = parts[0] ? parts[0].toLowerCase() : '';
       if (lowerLocales.indexOf(first) !== -1) parts.shift();
       var rest = parts.join('/');
-      var prefix = targetLocale && targetLocale !== 'en' ? targetLocale.toLowerCase() : '';
+      var prefix = targetLocale === 'en' ? '' : targetLocale;
       return '/' + (prefix ? prefix + '/' : '') + rest;
     }
 
