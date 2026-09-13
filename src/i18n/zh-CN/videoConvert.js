@@ -1,4 +1,7 @@
 export default {
+    poweredByPre: '视频转换由 ',
+    poweredByMid: ' 提供支持，交互模式改编自 ',
+    poweredByPost: '。',
     title: 'GIF Maker、Video to GIF、MP4 to GIF 在线转换 | pic-tool',
     description: '免费在线 GIF maker 和 video to gif 转换工具，支持 MP4 to GIF、视频压缩、变速、裁剪、提取音频和 FFmpeg 本地处理。',
     keywords: 'gif maker, video to gif, mp4 to gif, 在线 GIF 制作, 视频转 GIF, MP4 转 GIF, 视频转换, ffmpeg wasm, 浏览器视频编辑, 视频压缩, 视频裁剪, 提取视频音频',
