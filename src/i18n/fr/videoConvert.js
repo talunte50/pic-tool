@@ -2,6 +2,9 @@ import en from '../en/videoConvert';
 
 export default {
     ...en,
+    poweredByPre: 'Conversion vidéo propulsée par ',
+    poweredByMid: ". Modèle d'interaction adapté de ",
+    poweredByPost: '.',
     title: 'Créateur de GIF, Video to GIF et MP4 to GIF | pic-tool',
     description: 'Créateur de GIF gratuit et convertisseur video to GIF. Convertissez MP4 en GIF, compressez, changez la vitesse, extrayez audio, recadrez et utilisez FFmpeg dans le navigateur.',
     keywords: 'gif maker, créateur de gif, video to gif, vidéo en gif, mp4 to gif, mp4 en gif, convertisseur vidéo, ffmpeg wasm, compresser vidéo, recadrer vidéo, extraire audio vidéo',
