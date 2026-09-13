@@ -73,7 +73,7 @@ type FaqItem = { question: string; answer: string };
     )}
     <Privacy />
     <section class="text-center text-xs text-slate-400 [&_a]:underline">
-        Video conversion powered by <a href="https://github.com/ffmpegwasm/ffmpeg.wasm" target="_blank" rel="noopener noreferrer">ffmpeg.wasm</a>. Interaction model adapted from <a href="https://github.com/tejaswigowda/ffmpeg-webCLI" target="_blank" rel="noopener noreferrer">ffmpeg-webCLI</a>.
+        {t.poweredByPre || 'Video conversion powered by '}<a href="https://github.com/ffmpegwasm/ffmpeg.wasm" target="_blank" rel="noopener noreferrer">ffmpeg.wasm</a>{t.poweredByMid || '. Interaction model adapted from '}<a href="https://github.com/tejaswigowda/ffmpeg-webCLI" target="_blank" rel="noopener noreferrer">ffmpeg-webCLI</a>{t.poweredByPost || '.'}
     </section>
 </div>
 <ToolStructuredData
