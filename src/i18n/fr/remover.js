@@ -1,4 +1,8 @@
 export default {
+    localBadgePre: '🚧 Fonctionne à 100% localement dans votre navigateur via ',
+    localBadgeMid: ' (WebGPU / WASM). Modèle : ',
+    localBadgePost: ". Vous pouvez affiner les bords avec le pinceau et changer pour des arrière-plans prédéfinis.",
+
     title: 'Suppression d\'arrière-plan',
     description: 'Supprimez automatiquement les arrière-plans d\'image en un seul clic. L\'outil de suppression d\'arrière-plan peut traiter vos images RAPIDEMENT ET GRATUITEMENT - sans inscription requise. Téléchargez votre photo maintenant.',
     tips: 'Téléchargez une image pour supprimer l\'arrière-plan ou le remplacer par n\'importe quel arrière-plan',
