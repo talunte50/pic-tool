@@ -5,6 +5,7 @@ import fontkit from '@pdf-lib/fontkit';
 import { Icon } from './Icons';
 import usePaste from '@lib/usePaste';
 import { modKey } from '@lib/utils';
+import { resolvePdfWorkerSrc } from '@lib/pdfWorker';
 
 const FONT_URL = 'https://cdn.jsdelivr.net/gh/notofonts/noto-cjk@main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf';
 const imageTypes = ['image/png', 'image/jpeg', 'image/webp', 'image/bmp'];
@@ -29,8 +30,7 @@ const toBlob = (canvas, type = 'image/jpeg', quality = .92) => new Promise((reso
 
 async function loadPdfPages(file, onProgress) {
   const pdfjs = await import('pdfjs-dist');
-  const worker = await import('pdfjs-dist/build/pdf.worker.mjs?url');
-  pdfjs.GlobalWorkerOptions.workerSrc = worker.default;
+  pdfjs.GlobalWorkerOptions.workerSrc = await resolvePdfWorkerSrc();
   const pdf = await pdfjs.getDocument({ data: await file.arrayBuffer() }).promise;
   const pages = [];
   for (let index = 1; index <= pdf.numPages; index += 1) {
