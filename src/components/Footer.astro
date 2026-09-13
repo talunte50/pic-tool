@@ -91,12 +91,16 @@ const localLangMap = langUrls.map(item => {
             </a>
         </div>
         <script>
-            // 记住用户手动切换的语言，下次访问时 redirect.js 优先使用它
-            document.addEventListener('click', (e) => {
-                const a = e.target.closest('[data-lang-switch]');
-                if (a && a.dataset.langSwitch) {
-                    try { localStorage.setItem('pic-tool-lang', a.dataset.langSwitch); } catch (err) {}
-                }
+            // 记住用户手动切换的语言，下次访问时 redirect.js 优先使用它。
+            // 直接给每个语言锚点绑定事件，不做事件委托，
+            // 避免 astro check（严格 TS）把事件 target 判成 EventTarget | null 而报错。
+            document.querySelectorAll('[data-lang-switch]').forEach((a) => {
+                a.addEventListener('click', () => {
+                    const lang = a.getAttribute('data-lang-switch');
+                    if (lang) {
+                        try { localStorage.setItem('pic-tool-lang', lang); } catch (err) {}
+                    }
+                });
             });
         </script>
     </div>
