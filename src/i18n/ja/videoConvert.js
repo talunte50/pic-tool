@@ -2,6 +2,9 @@ import en from '../en/videoConvert';
 
 export default {
     ...en,
+    poweredByPre: '動画変換エンジン：',
+    poweredByMid: '。インタラクションモデルは ',
+    poweredByPost: ' を参考にしています。',
     title: 'GIF Maker・Video to GIF・MP4 to GIF 変換 | pic-tool',
     description: '無料の GIF maker と video to GIF 変換ツール。MP4 to GIF、動画圧縮、速度変更、音声抽出、切り抜き、FFmpeg 処理をブラウザで実行できます。',
     keywords: 'gif maker, GIF作成, video to gif, 動画をGIFに変換, mp4 to gif, MP4をGIFに変換, 動画変換, ffmpeg wasm, 動画圧縮, 動画切り抜き, 音声抽出',
