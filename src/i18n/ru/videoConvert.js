@@ -2,6 +2,9 @@ import en from '../en/videoConvert';
 
 export default {
     ...en,
+    poweredByPre: 'Конвертация видео на движке ',
+    poweredByMid: '. Модель взаимодействия адаптирована из ',
+    poweredByPost: '.',
     title: 'GIF Maker, Video to GIF и MP4 to GIF конвертер | pic-tool',
     description: 'Бесплатный GIF maker и конвертер video to GIF. Конвертируйте MP4 в GIF, сжимайте видео, меняйте скорость, извлекайте аудио, обрезайте кадр и запускайте FFmpeg в браузере.',
     keywords: 'gif maker, создание gif, video to gif, видео в gif, mp4 to gif, mp4 в gif, конвертер видео, ffmpeg wasm, сжать видео, обрезать видео, извлечь аудио из видео',
