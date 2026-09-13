@@ -49,6 +49,11 @@ export default defineConfig({
   site: CONFIG.website,
   trailingSlash: 'ignore',
   compressHTML: false,
+  // 为所有 [locale] 动态路由自动生成本地化路径，避免各页面单独写 getStaticPaths
+  i18n: {
+    defaultLocale: 'en',
+    locales: CONFIG.locals,
+  },
   integrations: [tailwind(), react(), sitemap({
     customPages: sitemapCustomPages,
     i18n: {
