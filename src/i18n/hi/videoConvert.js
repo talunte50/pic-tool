@@ -1,4 +1,8 @@
 export default {
+    poweredByPre: 'वीडियो रूपांतरण ',
+    poweredByMid: ' द्वारा संचालित। इंटरैक्शन मॉडल ',
+    poweredByPost: ' से अनुकूलित।',
+
     title: 'GIF Maker, Video to GIF और MP4 to GIF Converter | pic-tool',
     description: 'Online GIF बनाएं, video to GIF और MP4 to GIF convert करें, video compress करें, speed बदलें, audio extract करें और FFmpeg locally चलाएं.',
     keywords: 'gif maker, video to gif, mp4 to gif, online gif maker, video converter, ffmpeg wasm, compress video, trim video, extract audio',
