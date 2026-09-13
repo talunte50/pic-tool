@@ -2,6 +2,9 @@ import en from '../en/videoConvert';
 
 export default {
     ...en,
+    poweredByPre: 'Video conversion powered by ',
+    poweredByMid: '. Interaction model adapted from ',
+    poweredByPost: '.',
     title: 'GIF Maker, Video to GIF & MP4 to GIF Converter | pic-tool',
     description: 'Make GIFs online, convert video to GIF, MP4 to GIF, compress video, change speed, extract audio, crop, trim, and run FFmpeg locally.',
     keywords: 'gif maker, video to gif, mp4 to gif, online gif maker, video converter, ffmpeg wasm, compress video, trim video, extract audio from video',
