@@ -1,4 +1,8 @@
 export default {
+    localBadgePre: '🚧 Chạy 100% cục bộ trong trình duyệt của bạn qua ',
+    localBadgeMid: ' (WebGPU / WASM). Mô hình: ',
+    localBadgePost: '. Bạn có thể tinh chỉnh cạnh bằng cọ và đổi sang nền có sẵn.',
+
     title: 'Gỡ Bỏ Nền',
     description: 'Gỡ bỏ nền ảnh tự động chỉ với một cú nhấp chuột. Công cụ gỡ bỏ nền có thể xử lý ảnh của bạn NHANH & MIỄN PHÍ--không cần đăng ký. Tải lên ảnh của bạn ngay bây giờ.',
     tips: 'Tải lên một ảnh để gỡ bỏ nền hoặc thay thế bằng bất kỳ nền nào',
