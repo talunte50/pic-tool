@@ -33,6 +33,11 @@ const langUrls = CONFIG.locals.map(item => {
     const href = new URL((lang === 'en' && item !== 'en' ? item : '') + Astro.url.pathname.replace(reg, item === 'en' ? '': item), Astro.url.origin).toString();
     return {href, hrefLang: languages[item] || item, isActive: item.toLocaleLowerCase() === lang.toLocaleLowerCase()};
 });
+// 记录用户点击的语言切换，供 redirect.js 在下次访问时记住选择（localStorage 优先级高于浏览器语言）
+const localLangMap = langUrls.map(item => {
+    const seg = item.isActive ? lang : (item.href.split('/').filter(Boolean)[0] || 'en');
+    return { ...item, dataLang: seg.toLowerCase() };
+});
 ---
 
 <div class="py-8 bg-white">
@@ -48,8 +53,8 @@ const langUrls = CONFIG.locals.map(item => {
         </section>
         {showLanguageSwitcher && (
             <div class="col-span-3 flex justify-start gap-3 text-xs flex-wrap">
-                {langUrls.map(item => (
-                    item.isActive ? <span class="opacity-80 cursor-default">{item.hrefLang}</span> : <a class="hover:text-blue-500 underline" href={item.href} title={item.hrefLang}>{item.hrefLang}</a>
+                {localLangMap.map(item => (
+                    item.isActive ? <span class="opacity-80 cursor-default">{item.hrefLang}</span> : <a class="hover:text-blue-500 underline" href={item.href} title={item.hrefLang} data-lang-switch={item.dataLang}>{item.hrefLang}</a>
                 ))}
             </div>
         )}
@@ -84,5 +89,14 @@ const langUrls = CONFIG.locals.map(item => {
                 <svg viewBox="0 0 64 64" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M24.8,40.6l21.1-15.6c1-0.8,2.5-0.5,3,0.7c2.6,6.2,1.4,13.8-3.7,18.9C40,49.9,32.8,51,26.3,48.4l-7.2,3.3 c10.3,7,22.7,5.3,30.5-2.5c6.2-6.2,8.1-14.6,6.3-22.2l0,0c-2.6-11.2,0.6-15.6,7.3-24.8c0.2-0.2,0.3-0.4,0.5-0.7L55,10.3v0 L24.8,40.6"/><path d="M20.4,44.4c-7.4-7-6.1-17.9,0.2-24.2c4.6-4.7,12.3-6.6,18.9-3.8l7.1-3.3c-1.3-0.9-2.9-1.9-4.8-2.6 C33.3,7,23.1,8.7,16.1,15.7c-6.7,6.7-8.8,17-5.2,25.8c2.7,6.6-1.7,11.2-6.2,15.9c-1.6,1.7-3.2,3.3-4.4,5.1L20.4,44.4"/></svg>
             </a>
         </div>
+        <script>
+            // 记住用户手动切换的语言，下次访问时 redirect.js 优先使用它
+            document.addEventListener('click', (e) => {
+                const a = e.target.closest('[data-lang-switch]');
+                if (a && a.dataset.langSwitch) {
+                    try { localStorage.setItem('pic-tool-lang', a.dataset.langSwitch); } catch (err) {}
+                }
+            });
+        </script>
     </div>
 </div>
