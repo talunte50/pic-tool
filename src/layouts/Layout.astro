@@ -49,7 +49,6 @@ const resolvedAlternates = languageAlternates === false ? undefined : (languageA
         <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover' />
         <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
         <meta name='generator' content={Astro.generator} />
-        <link rel="sitemap" href="/sitemap-index.xml" />
         <!-- PWA -->
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#4F46E5" />
@@ -58,6 +57,8 @@ const resolvedAlternates = languageAlternates === false ? undefined : (languageA
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="pic-tool" />
         <link rel="apple-touch-icon" href="/image.png" />
+        <!-- 首屏即执行：根据浏览器语言/用户上次选择自动跳转到对应语言首页，避免英文闪一下 -->
+        <script src="/redirect.js"></script>
         <script>
             // 注册 Service Worker（仅一份，避免重复注册）
             if ('serviceWorker' in navigator && location.protocol === 'https:') {
