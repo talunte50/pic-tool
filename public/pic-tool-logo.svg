@@ -1,0 +1,11 @@
+<svg width="320" height="64" viewBox="0 0 320 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 左侧图标：圆角方形 Indigo 瓦片 + 白色山峰太阳 -->
+  <g>
+    <rect x="0" y="0" width="64" height="64" rx="16" fill="#4F46E5"/>
+    <circle cx="45" cy="22" r="7" fill="#FFFFFF"/>
+    <path d="M17 46 L31 29 L41 40 L36 34 L46 46 Z" fill="#C7D2FE"/>
+    <path d="M9 48 L26 27 L36 40 L32 35 L45 48 Z" fill="#FFFFFF"/>
+  </g>
+  <!-- 右侧字标：pic-tool，小写无衬线（Inter 风格），精确锁色 #4F46E5 -->
+  <text x="80" y="42" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="-1" fill="#4F46E5">pic-tool</text>
+</svg>
