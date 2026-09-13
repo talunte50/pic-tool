@@ -1,4 +1,8 @@
 export default {
+    localBadgePre: '🚧 Läuft zu 100% lokal in deinem Browser über ',
+    localBadgeMid: ' (WebGPU / WASM). Modell: ',
+    localBadgePost: '. Du kannst Kanten mit dem Pinsel nachbessern und Hintergrundvorlagen verwenden.',
+
     title: 'Bildhintergrund online entfernen | pic-tool',
     description: 'Entfernen Sie Fotohintergründe automatisch und erstellen Sie transparente Bilder direkt im Browser. Schnell, kostenlos und ohne Anmeldung.',
     tips: 'Bild hinzufügen, um den Hintergrund zu entfernen oder zu ersetzen',
