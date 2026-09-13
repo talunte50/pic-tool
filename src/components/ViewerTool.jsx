@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Button, Radio, Spin, Upload, message } from 'antd';
 import { Icon } from './Icons';
 import { cn, formatSize, toDownloadFile } from '@lib/utils';
+import { resolvePdfWorkerSrc } from '@lib/pdfWorker';
 
 const { Dragger } = Upload;
 
@@ -203,11 +204,11 @@ const parseCsv = (text) => {
 };
 
 const getPdfJs = async () => {
-    const [pdfjsLib, worker] = await Promise.all([
+    const [pdfjsLib, workerSrc] = await Promise.all([
         import('pdfjs-dist'),
-        import('pdfjs-dist/build/pdf.worker.mjs?url'),
+        resolvePdfWorkerSrc(),
     ]);
-    pdfjsLib.GlobalWorkerOptions.workerSrc = worker.default;
+    pdfjsLib.GlobalWorkerOptions.workerSrc = workerSrc;
     return pdfjsLib;
 };
 
