@@ -10,6 +10,7 @@ import screenshot from './screenshot';
 import videoConvert from './videoConvert';
 import convert from './convert';
 import viewer from './viewer';
+import legal from './legal';
 
 export default {
     title: '在线截图、图片编辑与格式转换工具 | pic-tool',
@@ -20,6 +21,19 @@ export default {
     privacy: '隐私',
     terms: '条款',
     blog: '博客',
+    footerToolsTitle: 'pic-tool 核心工具',
+    footerToolsIntro: '截图、图片、视频与本地浏览器工具快捷入口。',
+    localProcessing: {
+        title: '无需上传，本地处理',
+        cont1: '你的文件完全在浏览器本地处理。pic-tool 的这些工具无需将图片或视频上传到服务器。',
+        cont2: '适用于截图、私人照片、文档、教程、产品图片和随手记录，隐私更有保障。'
+    },
+    moreTools: '更多工具',
+    editorCreditPre: '图片编辑器由 ',
+    editorCreditPost: ' 提供',
+    copyright: '版权所有 © 2025 pic-tool',
+    askAiTitle: '向 {ai} 询问 pic-tool',
+    legal,
     nav,
     editor,
     beautifier,
