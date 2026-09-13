@@ -1,4 +1,7 @@
 export default {
+    poweredByPre: 'Video conversion powered by ',
+    poweredByMid: '. Interaction model adapted from ',
+    poweredByPost: '.',
     title: 'GIF Maker, Video to GIF & MP4 to GIF Converter | pic-tool',
     description: 'Free online gif maker and video to gif converter. Convert MP4 to GIF, compress video, change speed, extract audio, crop, trim, and run FFmpeg locally in your browser.',
     keywords: 'gif maker, video to gif, mp4 to gif, online gif maker, convert video to gif, mp4 gif converter, video converter, ffmpeg wasm, browser video editor, compress video, trim video, extract audio from video',
