@@ -1,26 +1,26 @@
-# ShotEasy - take a screenshot online
+# pic-tool - take a screenshot online
 
 Photo edit online for free, resize and filter photos, convert image formats, merge images or PDF pages into a long image, convert video to GIF, open documents, recognize text with browser-based OCR, create searchable PDFs, and easily screenshot an area or full page.
 
 [🏆 Chrome Extension](https://chromewebstore.google.com/detail/nmppkehciohcgcehlnifgeokgioidknh)
 
-[🏞️ Image Editor](https://shoteasy.fun/)
+[🏞️ Image Editor](https://pic.nxzai.cc.cd/)
 
-[😱 Screenshot Beautifier](https://shoteasy.fun/screenshot-beautifier/)
+[😱 Screenshot Beautifier](https://pic.nxzai.cc.cd/screenshot-beautifier/)
 
-[🚴 Photo to Rounded](https://shoteasy.fun/photo-to-rounded/)
+[🚴 Photo to Rounded](https://pic.nxzai.cc.cd/photo-to-rounded/)
 
-[🎉 Background Remover](https://shoteasy.fun/background-remover/)
+[🎉 Background Remover](https://pic.nxzai.cc.cd/background-remover/)
 
-[😬 Image Compressor](https://shoteasy.fun/image-compressor/)
+[😬 Image Compressor](https://pic.nxzai.cc.cd/image-compressor/)
 
-[🧩 Long Image Composer](https://shoteasy.fun/long-image/)
+[🧩 Long Image Composer](https://pic.nxzai.cc.cd/long-image/)
 
-[🎬 Video Convert](https://shoteasy.fun/video-convert/)
+[🎬 Video Convert](https://pic.nxzai.cc.cd/video-convert/)
 
-[📄 Office & PDF Viewer](https://shoteasy.fun/viewer/)
+[📄 Office & PDF Viewer](https://pic.nxzai.cc.cd/viewer/)
 
-[🔎 OCR & Editable PDF](https://shoteasy.fun/ocr-pdf/)
+[🔎 OCR & Editable PDF](https://pic.nxzai.cc.cd/ocr-pdf/)
 
 ## OCR & searchable PDF
 
@@ -91,13 +91,13 @@ All commands are run from the root of the project, from a terminal:
 
 ## 🚀 Deploy With Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FCH563%2Fshot-easy-website)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftalunte50%2Fpic-tool)
 
 [Vercel:](https://vercel.com/) used for deploying website
 
 ### If you find anything wrong, give me an Issues
 
-[Give me the bugs](https://github.com/CH563/shot-easy-website/issues)
+[Give me the bugs](https://github.com/talunte50/pic-tool/issues)
 
 ## Update
 
