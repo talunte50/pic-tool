@@ -12,6 +12,7 @@ import convert from './convert';
 import viewer from './viewer';
 
 export default {
+    askAiTitle: 'pic-tool के बारे में {ai} से पूछें',
     title: 'मुफ्त ऑनलाइन फोटो एडिटर',
     description: 'फोटो ऑनलाइन मुफ्त में एडिट करें, resize और filter करें, images को JPG/PNG/JPEG/WebP में convert करें, और selected area या full page screenshot लें.',
     keywords: 'pic-tool, ऑनलाइन स्क्रीनशॉट, फोटो एडिट, फोटो कन्वर्टर, इमेज कन्वर्टर, ऑनलाइन एडिटर, इमेज फॉर्मेट ऑनलाइन कन्वर्ट, image to jpg, jpg to webp, jpg to png',

@@ -12,6 +12,7 @@ import convert from './convert';
 import viewer from './viewer';
 
 export default {
+    askAiTitle: 'Tanya {ai} tentang pic-tool',
     title: 'Editor foto online gratis',
     description: 'Edit foto online gratis, ubah ukuran dan beri filter, konversi gambar ke JPG/PNG/JPEG/WebP, serta ambil screenshot area atau halaman penuh.',
     keywords: 'pic-tool, screenshot online, edit foto, konverter foto, konverter gambar, editor online, konversi format gambar online, konversi gambar ke jpg, jpg ke webp, jpg ke png',

@@ -12,6 +12,7 @@ import convert from './convert';
 import viewer from './viewer';
 
 export default {
+    askAiTitle: 'Preguntar a {ai} sobre pic-tool',
     title: 'Editor de fotos y capturas online gratis | pic-tool',
     description:
         'Edita fotos en línea de forma gratuita, redimensiona y filtra cualquier foto, edita fotos en el navegador, convierte imágenes a jpg/png/jpeg/webp, captura fácilmente áreas o páginas completas',

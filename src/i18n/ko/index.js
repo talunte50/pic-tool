@@ -12,6 +12,7 @@ import convert from './convert';
 import viewer from './viewer';
 
 export default {
+    askAiTitle: 'pic-tool에 대해 {ai}에게 물어보기',
     title: '무료 온라인 사진 편집기',
     description: '사진을 무료로 온라인 편집하고, 크기 조절과 필터를 적용하며, 이미지를 JPG/PNG/JPEG/WebP로 변환하고 영역 또는 전체 페이지 스크린샷을 캡처하세요.',
     keywords: 'pic-tool, 온라인 스크린샷, 사진 편집, 사진 변환기, 이미지 변환기, 온라인 편집기, 이미지 형식 온라인 변환, 이미지를 jpg로 변환, jpg to webp, jpg to png',

@@ -12,6 +12,7 @@ import convert from './convert';
 import viewer from './viewer';
 
 export default {
+    askAiTitle: 'Ask {ai} about pic-tool',
     title: 'Online Photo Editor and Screenshot Tools for Free | pic-tool',
     description: 'Photo edit online for free, resize, and filter any photos, edit photo on browser, convert image to jpg/png/jpeg/webp, easy to screenshot area or full page',
     keywords: 'pic-tool, easy shot, screenshot, edit photo, photo converter, image converter, editor online, change image format online, convert image to jpg, jpg to webp, jpg to png',

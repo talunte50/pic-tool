@@ -12,6 +12,7 @@ import convert from './convert';
 import viewer from './viewer';
 
 export default {
+    askAiTitle: 'pic-tool について {ai} に質問する',
     title: 'スクリーンショットと写真編集をオンラインで無料利用 | pic-tool',
     description:
         'オンラインで写真を無料で編集、リサイズ、フィルタリングができます。ブラウザで写真を編集、画像をjpg/png/jpeg/webpに変換、簡単に画面の一部または全体をスクリーンショットできます',
