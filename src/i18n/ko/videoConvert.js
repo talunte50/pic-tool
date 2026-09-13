@@ -1,4 +1,8 @@
 export default {
+    poweredByPre: '동영상 변환 엔진: ',
+    poweredByMid: '. 인터랙션 모델은 ',
+    poweredByPost: '에서 가져왔습니다.',
+
     title: 'GIF Maker, Video to GIF & MP4 to GIF 변환기 | pic-tool',
     description: '온라인 GIF 만들기, video to GIF, MP4 to GIF 변환, 비디오 압축, 속도 변경, 오디오 추출, FFmpeg 로컬 실행을 지원합니다.',
     keywords: 'gif maker, video to gif, mp4 to gif, online gif maker, video converter, ffmpeg wasm, compress video, trim video, extract audio',
