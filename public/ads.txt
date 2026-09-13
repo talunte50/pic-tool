@@ -1,0 +1,4 @@
+# ads.txt — Authorized Digital Sellers
+# AdSense 后台会因缺少此文件而告警「收益存在风险」，务必放在站点根目录 https://pic.nxzai.cc.cd/ads.txt
+# 若发布商 ID 有变更，同步修改下面这一行即可。
+google.com, pub-6098563075584509, DIRECT, f08c47fec0942fa0
