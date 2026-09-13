@@ -1,0 +1,15 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 圆角方形 Indigo 瓦片 -->
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="#4F46E5"/>
+  <!-- 白色极简照片符号：山峰 + 太阳 -->
+  <g fill="#FFFFFF">
+    <!-- 太阳光晕（小圆） -->
+    <circle cx="372" cy="164" r="30"/>
+    <!-- 后山（浅一点，用 brand-100 制造层次） -->
+    <path d="M186 348 L300 234 L372 306 L340 274 L366 300 Z" fill="#C7D2FE"/>
+    <!-- 主山峰（白色，前景） -->
+    <path d="M120 372 L250 232 L330 312 L300 282 L360 342 Z"/>
+    <!-- 基线 -->
+    <path d="M120 372 L392 372" stroke="#FFFFFF" stroke-width="0" />
+  </g>
+</svg>
