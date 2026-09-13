@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shoteasy.fun/sitemap-index.xml
+Sitemap: https://pic-tool.fun/sitemap-index.xml
