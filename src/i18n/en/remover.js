@@ -1,4 +1,7 @@
 export default {
+    localBadgePre: '🚧 Runs 100% locally in your browser via ',
+    localBadgeMid: ' (WebGPU / WASM). Model: ',
+    localBadgePost: '. You can fine-tune edges with the brush & swap in preset backgrounds.',
     title: 'Background Remover Online - Create Transparent Images | pic-tool',
     description: 'Remove image backgrounds automatically just one click. Background remover tool can process your images FAST & FREE--no signup required. Upload your photo now.',
     tips: 'Add an image to remove the background or replace to Any Background',
