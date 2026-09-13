@@ -1,0 +1,12 @@
+---
+import ViewerRoutePage from '@components/ViewerRoutePage.astro';
+import { CONFIG } from '@lib/config';
+
+export function getStaticPaths() {
+    return CONFIG.locals.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+---
+
+<ViewerRoutePage locale={locale} alias="excel-viewer" />
