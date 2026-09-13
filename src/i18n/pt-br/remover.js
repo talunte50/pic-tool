@@ -1,4 +1,8 @@
 export default {
+    localBadgePre: '🚧 Roda 100% localmente no seu navegador via ',
+    localBadgeMid: ' (WebGPU / WASM). Modelo: ',
+    localBadgePost: '. Você pode ajustar as bordas com o pincel e trocar por fundos predefinidos.',
+
     title: 'Remover fundo de imagem online grátis | pic-tool',
     description: 'Remova o fundo de fotos automaticamente e crie imagens transparentes no navegador. Rápido, grátis e sem cadastro.',
     tips: 'Adicione uma imagem para remover ou trocar o fundo',
