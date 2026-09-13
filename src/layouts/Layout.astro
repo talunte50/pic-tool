@@ -58,7 +58,8 @@ const resolvedAlternates = languageAlternates === false ? undefined : (languageA
         <meta name="apple-mobile-web-app-title" content="pic-tool" />
         <link rel="apple-touch-icon" href="/image.png" />
         <!-- 首屏即执行：根据浏览器语言/用户上次选择自动跳转到对应语言首页，避免英文闪一下 -->
-        <script src="/redirect.js"></script>
+        <!-- is:inline 必需：redirect.js 位于 public/ 目录，Astro 不能打包它 -->
+        <script src="/redirect.js" is:inline></script>
         <script>
             // 注册 Service Worker（仅一份，避免重复注册）
             if ('serviceWorker' in navigator && location.protocol === 'https:') {
