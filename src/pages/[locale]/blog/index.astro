@@ -1,3 +1,9 @@
 ---
+import { CONFIG } from '@lib/config';
+
+export function getStaticPaths() {
+    return CONFIG.locals.map((locale) => ({ params: { locale } }));
+}
+
 return Astro.redirect(`/blog/${Astro.url.search}`, 301);
 ---
