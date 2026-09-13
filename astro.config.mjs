@@ -3,64 +3,16 @@ import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import wasm from "vite-plugin-wasm";
 
-import sitemap from "@astrojs/sitemap";
-import { CONFIG, LANGUAGES_CODE } from "./src/lib/config";
-
-const localizedPages = [
-  '',
-  'take-a-screenshot',
-  'screenshot-beautifier',
-  'image-compressor',
-  'convert',
-  'viewer',
-  'doc-viewer',
-  'ppt-viewer',
-  'excel-viewer',
-  'csv-viewer',
-  'pdf-viewer',
-  'ocr-pdf',
-  'archive-viewer',
-  'long-image',
-  'video-convert',
-  'background-remover',
-  'blur-background-online',
-  'photo-to-rounded',
-  'privacy-policy',
-  'terms-of-service'
-];
-
-const ruScreenshotClusterPages = [
-  'kak-sdelat-skrinshot',
-  'obrezat-skrinshot-online',
-  'redaktor-skrinshotov-online'
-];
-
-const toAbsoluteUrl = (path) => new URL(path, CONFIG.website).toString();
-const toLocalizedPath = (locale, page) => page ? `/${locale}/${page}/` : `/${locale}/`;
-const sitemapCustomPages = [
-  ...CONFIG.locals
-    .filter((locale) => locale !== 'en')
-    .flatMap((locale) => localizedPages.map((page) => toAbsoluteUrl(toLocalizedPath(locale, page)))),
-  ...ruScreenshotClusterPages.map((page) => toAbsoluteUrl(`/ru/${page}/`))
-];
+// sitemap 集成已移除：@astrojs/sitemap 3.x 与底层 sitemap 包在 EdgeOne 构建环境存在路径兼容问题
+// （absolute path not allowed / _routes undefined），后续可用 astro-sitemap 插件或静态 robots.txt 替代
+import { CONFIG } from "./src/lib/config";
 
 // https://astro.build/config
 export default defineConfig({
   site: CONFIG.website,
   trailingSlash: 'ignore',
   compressHTML: false,
-  // 为所有 [locale] 动态路由自动生成本地化路径，避免各页面单独写 getStaticPaths
-  i18n: {
-    defaultLocale: 'en',
-    locales: CONFIG.locals,
-  },
-  integrations: [tailwind(), react(), sitemap({
-    customPages: sitemapCustomPages,
-    i18n: {
-      defaultLocale: "en",
-      locales: LANGUAGES_CODE
-    }
-  })],
+  integrations: [tailwind(), react()],
   output: "static",
   vite: {
     plugins: [wasm()]
