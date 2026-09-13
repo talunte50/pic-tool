@@ -1,0 +1,35 @@
+import nav from './nav';
+import editor from './editor';
+import beautifier from './beautifier';
+import rounded from './rounded';
+import remover from './remover';
+import blurBackground from './blurBackground';
+import compressor from './compressor';
+import longImage from './longImage';
+import screenshot from './screenshot';
+import videoConvert from './videoConvert';
+import convert from './convert';
+import viewer from './viewer';
+
+export default {
+    title: 'Chỉnh sửa ảnh và chụp màn hình online miễn phí | pic-tool',
+    description:
+        'Chỉnh sửa ảnh trực tuyến miễn phí, thay đổi kích thước và lọc bất kỳ ảnh nào, chỉnh sửa ảnh trên trình duyệt, chuyển đổi ảnh sang jpg/png/jpeg/webp, dễ dàng chụp ảnh vùng hoặc toàn trang',
+    keywords:
+        'Shot Easy, easy shot, chụp ảnh màn hình, chỉnh sửa ảnh, bộ chuyển đổi ảnh, bộ chuyển đổi hình ảnh, trình chỉnh sửa trực tuyến, thay đổi định dạng hình ảnh trực tuyến, chuyển đổi hình ảnh sang jpg, jpg sang webp, jpg sang png',
+    privacy: 'Quyền riêng tư',
+    terms: 'Điều khoản',
+    blog: 'Blog',
+    nav,
+    editor,
+    beautifier,
+    rounded,
+    remover,
+    blurBackground,
+    compressor,
+    longImage,
+    screenshot,
+    videoConvert,
+    convert,
+    viewer
+};
