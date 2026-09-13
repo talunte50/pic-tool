@@ -2,6 +2,11 @@
 import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
+import { CONFIG } from '@lib/config';
+
+export function getStaticPaths() {
+    return CONFIG.locals.map((locale) => ({ params: { locale } }));
+}
 ---
 
 <Layout title='Terms Of Service' description='Terms Of Service'>
