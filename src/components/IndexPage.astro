@@ -2,8 +2,8 @@
 import BrowserIcon from '@components/BrowserIcon.astro';
 import EditBox from '@components/EditBox.jsx';
 import Privacy from '@components/Privacy.astro';
-import fakeact from '@static/fakeact.svg';
-import fakemail from '@static/fakemail.svg';
+import pdfToolsIcon from '@static/pdf-tools.svg';
+import nxzaiBlogIcon from '@static/nxzai-blog.svg';
 import {getLang, getLocale, getBrowserType} from '@i18n/index';
 import { getRelativeLocaleUrl } from '@lib/localePaths';
 const { locale } = Astro.params;
@@ -86,15 +86,15 @@ const browserType = getBrowserType(Astro.request?.headers?.get('User-Agent'));
         <h3 class="text-center font-semibold p-4 my-2">More Tools</h3>
         <div class="flex flex-row gap-6 justify-center">
             <div class="text-center">
-                <a href="https://fakeact.fun/" target="_blank" title="fakeact.fun" class="inline-block text-xs p-2 rounded-md hover:bg-gray-100">
-                    <img src={fakeact.src} alt="Fakeact logo" class="mx-auto mb-2 w-8" />
-                    <p>Fakeact</p>
+                <a href="https://pdf.nxzai.cc.cd/" target="_blank" rel="noopener noreferrer" title="PDF Tools" class="inline-block text-xs p-2 rounded-md hover:bg-gray-100">
+                    <img src={pdfToolsIcon.src} alt="PDF Tools logo" class="mx-auto mb-2 w-8" />
+                    <p>PDF Tools</p>
                 </a>
             </div>
             <div class="text-center">
-                <a href="https://mail.fakeact.fun/" target="_blank" title="mail.fakeact.fun" class="inline-block text-xs p-2 rounded-md hover:bg-gray-100">
-                    <img src={fakemail.src} alt="FakeMail logo" class="mx-auto mb-2 w-8" />
-                    <p>FakeMail</p>
+                <a href="https://nxzai.cc.cd/" target="_blank" rel="noopener noreferrer" title="那小子AI博客" class="inline-block text-xs p-2 rounded-md hover:bg-gray-100">
+                    <img src={nxzaiBlogIcon.src} alt="那小子AI博客 logo" class="mx-auto mb-2 w-8" />
+                    <p>那小子AI博客</p>
                 </a>
             </div>
         </div>
