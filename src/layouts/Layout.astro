@@ -5,6 +5,7 @@ import '@static/global.css';
 import { CONFIG, LANGUAGES_CODE } from '@lib/config';
 import { getLocale, getLang } from '@i18n/index';
 import AdSlot from '../components/AdSlot.jsx';
+import { ADS_PROVIDER, GOOGLE_ADS_CLIENT } from '@lib/ads';
 interface Props {
     title: string;
     description?: string;
@@ -48,6 +49,17 @@ const resolvedAlternates = languageAlternates === false ? undefined : (languageA
         <meta charset='UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover' />
         <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+        <!-- Google AdSense 加载器：配了 PUBLIC_GOOGLE_ADS_CLIENT 才注入。
+             这一段同时也是 AdSense「自动广告(Auto Ads)」的启用脚本，
+             即使在后台没开 Auto Ads 也不会有副作用。 -->
+        {ADS_PROVIDER === 'google' && (
+            <script
+                async
+                is:inline
+                src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${GOOGLE_ADS_CLIENT}`}
+                crossorigin="anonymous"
+            ></script>
+        )}
         <meta name='generator' content={Astro.generator} />
         <!-- PWA -->
         <link rel="manifest" href="/manifest.json" />
