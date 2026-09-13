@@ -10,6 +10,7 @@ import screenshot from './screenshot';
 import videoConvert from './videoConvert';
 import convert from './convert';
 import viewer from './viewer';
+import legal from './legal';
 
 export default {
     title: 'Photo editor online for free',
@@ -25,6 +26,12 @@ export default {
         cont1: 'Your files are processed locally in your browser. pic-tool does not need to upload images or videos to a server for these tools.',
         cont2: 'Use it for screenshots, private photos, documents, tutorials, product images, and quick notes with better privacy.'
     },
+    moreTools: 'More Tools',
+    editorCreditPre: 'Image Editor by ',
+    editorCreditPost: '',
+    copyright: 'Copyright © 2025 pic-tool',
+    askAiTitle: 'Ask {ai} about pic-tool',
+    legal,
     nav,
     editor,
     beautifier,
