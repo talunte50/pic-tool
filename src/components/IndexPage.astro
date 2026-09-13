@@ -80,10 +80,10 @@ const browserType = getBrowserType(Astro.request?.headers?.get('User-Agent'));
     </section>
     <Privacy />
     <section class="text-center text-xs text-slate-400 [&_a]:underline">
-        Image Editor by <a href="https://github.com/scaleflex/filerobot-image-editor" target="_blank" rel="noopener noreferrer">Filerobot Image Editor</a>
+        {l.editorCreditPre || 'Image Editor by '}<a href="https://github.com/scaleflex/filerobot-image-editor" target="_blank" rel="noopener noreferrer">Filerobot Image Editor</a>{l.editorCreditPost || ''}
     </section>
     <div class="container mx-auto p-4">
-        <h3 class="text-center font-semibold p-4 my-2">More Tools</h3>
+        <h3 class="text-center font-semibold p-4 my-2">{l.moreTools || 'More Tools'}</h3>
         <div class="flex flex-row gap-6 justify-center">
             <div class="text-center">
                 <a href="https://pdf.nxzai.cc.cd/" target="_blank" rel="noopener noreferrer" title="PDF Tools" class="inline-block text-xs p-2 rounded-md hover:bg-gray-100">
