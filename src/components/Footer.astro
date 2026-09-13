@@ -32,7 +32,7 @@ const perplexityUrl = `https://www.perplexity.ai/?q=${encodedAiPrompt}`;
 const grokUrl = `https://grok.com/?q=${encodedAiPrompt}`;
 // AI 链接的可访问性文案走 i18n（{ai} 占位符），未提供翻译的语言回退英文
 const askAiTemplate = (l && l.askAiTitle) || getLang('en').askAiTitle || 'Ask {ai} about pic-tool';
-const askAiTitle = (ai) => askAiTemplate.replace('{ai}', ai);
+const askAiTitle = (ai: string) => askAiTemplate.replace('{ai}', ai);
 const langUrls = CONFIG.locals.map(item => {
     const href = new URL((lang === 'en' && item !== 'en' ? item : '') + Astro.url.pathname.replace(reg, item === 'en' ? '': item), Astro.url.origin).toString();
     return {href, hrefLang: languages[item] || item, isActive: item.toLocaleLowerCase() === lang.toLocaleLowerCase()};
