@@ -1,5 +1,12 @@
 ---
 import ViewerRoutePage from '@components/ViewerRoutePage.astro';
+import { CONFIG } from '@lib/config';
+
+export function getStaticPaths() {
+    return CONFIG.locals.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
 ---
 
-<ViewerRoutePage alias="ppt-viewer" />
+<ViewerRoutePage locale={locale} alias="ppt-viewer" />
