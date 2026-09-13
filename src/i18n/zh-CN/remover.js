@@ -1,4 +1,7 @@
 export default {
+    localBadgePre: '🚧 基于 ',
+    localBadgeMid: '（WebGPU / WASM）在浏览器本地运行，模型：',
+    localBadgePost: '。你可以用画笔微调边缘，并一键更换预设背景。',
     title: '图片背景移除工具 - 在线抠图生成透明背景 | pic-tool',
     description: '只需一键就可自动移除图像背景。背景移除工具可以快速、免费处理您的图像——无需注册。立即上传您的照片。',
     tips: '添加一张图像以移除背景或替换为任意背景',
