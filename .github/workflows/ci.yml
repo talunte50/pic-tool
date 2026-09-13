@@ -17,7 +17,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          # 注意：不要开 cache: npm —— 本仓库未提交 package-lock.json / yarn.lock，
+          # 开缓存会在这一步直接报 "Dependencies lock file is not found" 并中断 CI。
+          # 若后续提交了 lock 文件，可改回 cache: npm 并把 install 换成 npm ci。
 
       - name: Install deps
         run: npm install
@@ -43,7 +45,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          # 同上：无 lock 文件，不能开 cache: npm
 
       - name: Install deps
         run: npm install
