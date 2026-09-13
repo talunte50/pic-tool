@@ -1,4 +1,8 @@
 export default {
+    localBadgePre: '🚧 Se ejecuta 100% localmente en tu navegador con ',
+    localBadgeMid: ' (WebGPU / WASM). Modelo: ',
+    localBadgePost: '. Puedes retocar los bordes con el pincel y cambiar a fondos predefinidos.',
+
     title: 'Eliminador de Fondos',
     description: 'Elimina automáticamente los fondos de las imágenes con solo un clic. La herramienta de eliminación de fondos puede procesar tus imágenes RÁPIDO Y GRATIS, sin necesidad de registrarte. Sube tu foto ahora.',
     tips: 'Sube una imagen para eliminar el fondo o reemplazarlo por cualquier otro fondo',
