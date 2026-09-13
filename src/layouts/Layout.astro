@@ -1,0 +1,102 @@
+---
+// import { ViewTransitions } from 'astro:transitions';
+import { SEO } from 'astro-seo';
+import '@static/global.css';
+import { CONFIG, LANGUAGES_CODE } from '@lib/config';
+import { getLocale, getLang } from '@i18n/index';
+import AdSlot from '../components/AdSlot.jsx';
+interface Props {
+    title: string;
+    description?: string;
+    keywords?: string;
+    image?: string;
+    languageAlternates?: false | { href: string; hrefLang: string }[];
+}
+const { pathname, origin } = Astro.url;
+const { locale } = Astro.params;
+const resolvedImageWithDomain = `${origin}/image.png`;
+const canonicalURL = new URL(pathname, origin);
+const lang = getLocale(locale);
+const languagesCode = LANGUAGES_CODE as {[key: string]: string};
+const pathParts = pathname.split('/').filter(Boolean);
+const currentLocaleFromPath = CONFIG.locals.find(item => item.toLowerCase() === pathParts[0]?.toLowerCase());
+const pagePath = currentLocaleFromPath ? pathParts.slice(1) : pathParts;
+const toLocalizedPath = (targetLocale: string) => {
+    const segments = targetLocale === 'en' ? pagePath : [targetLocale, ...pagePath];
+    return `/${segments.join('/')}`;
+};
+const alternates = CONFIG.locals.map(item => {
+    const href = new URL(toLocalizedPath(item), CONFIG.website).toString();
+    return {href, hrefLang: languagesCode[item] || item};
+})
+alternates.push({
+    href: new URL(toLocalizedPath('en'), CONFIG.website).toString(),
+    hrefLang: 'x-default'
+});
+const t = getLang(locale)
+const { title, description, keywords, image, languageAlternates } = Astro.props;
+const headTitle = title || t.title;
+const headDesc = description || t.description;
+const headKeywords = keywords || t.keywords;
+const ogImage = image || resolvedImageWithDomain;
+const resolvedAlternates = languageAlternates === false ? undefined : (languageAlternates || alternates);
+---
+
+<!doctype html>
+<html lang={languagesCode[lang] || lang} dir="ltr">
+    <head>
+        <meta charset='UTF-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover' />
+        <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+        <meta name='generator' content={Astro.generator} />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <!-- PWA -->
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#4F46E5" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="pic-tool" />
+        <link rel="apple-touch-icon" href="/image.png" />
+        <script>
+            // 注册 Service Worker（仅一份，避免重复注册）
+            if ('serviceWorker' in navigator && location.protocol === 'https:') {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js').catch(() => {});
+                });
+            }
+        </script>
+        {headKeywords && <meta name="keywords" content={headKeywords}>}
+        <SEO
+            title={headTitle}
+            description={headDesc}
+            canonical={canonicalURL}
+            languageAlternates={resolvedAlternates}
+            twitter={{
+                creator: '@LiWen563',
+                site: '@LiWen563',
+                card: 'summary_large_image',
+                imageAlt: headTitle,
+                description: headDesc,
+            }}
+            openGraph={{
+                basic: {
+                    url: canonicalURL,
+                    type: 'website',
+                    title: headTitle,
+                    image: ogImage,
+                },
+                image: {
+                    url: ogImage,
+                    alt: headTitle,
+                },
+            }}
+        />
+        <!-- <ViewTransitions /> -->
+    </head>
+    <body>
+        <AdSlot client:load />
+        <slot />
+        <AdSlot client:load />
+    </body>
+</html>
