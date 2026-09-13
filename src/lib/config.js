@@ -34,6 +34,8 @@ export const LANGUAGES_CODE = {
 const locals = Object.keys(LANGUAGES);
 
 export const CONFIG = {
-    website: 'https://pic-tool.fun',
+    // 实际部署域名（canonical / og:url / hreflang / llms 全部由这里驱动）
+    // pic-tool.fun 未注册，务必与实际访问域名保持一致
+    website: 'https://pic.nxzai.cc.cd',
     locals
 }
