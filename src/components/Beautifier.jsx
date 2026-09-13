@@ -44,7 +44,7 @@ export default function Beautifier() {
     });
     const [bgValue, setBgValue] = useState('default_1');
     const [useWater, setUseWater] = useState(false);
-    const [waterCont, setWaterCont] = useState('Shot Easy');
+    const [waterCont, setWaterCont] = useState('pic-tool');
     const [waterColor, setWaterColor] = useState('rgba(0,0,0,.15)');
     const [waterIndex, setWaterIndex] = useState(11);
     const [direction, setDirection] = useState(-22);
