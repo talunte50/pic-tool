@@ -1,4 +1,8 @@
 export default {
+    localBadgePre: '🚧 पूरी तरह आपके ब्राउज़र में लोकल चलता है — ',
+    localBadgeMid: ' (WebGPU / WASM)। मॉडल: ',
+    localBadgePost: '. आप ब्रश से किनारों को फ़ाइन-ट्यून कर सकते हैं और प्रीसेट बैकग्राउंड बदल सकते हैं।',
+
     title: 'Image Background Online Free Remove करें | pic-tool',
     description: 'Photo background automatically remove करें और browser में transparent images बनाएं. Fast, free, no signup.',
     tips: 'Background remove या replace करने के लिए image add करें',
