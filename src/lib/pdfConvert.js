@@ -1,4 +1,5 @@
 import { canvasToBlob, extensionForMime } from './imageConvert';
+import { resolvePdfWorkerSrc } from './pdfWorker';
 
 const pdfCMapUrls = import.meta.glob('/node_modules/pdfjs-dist/cmaps/*.bcmap', { query: '?url', import: 'default', eager: true });
 const pdfStandardFontUrls = import.meta.glob('/node_modules/pdfjs-dist/standard_fonts/*.{pfb,ttf}', { query: '?url', import: 'default', eager: true });
@@ -16,11 +17,11 @@ const normalizeImageType = (type = 'image/png') => {
 };
 
 const getPdfJs = async () => {
-    const [pdfjsLib, worker] = await Promise.all([
+    const [pdfjsLib, workerSrc] = await Promise.all([
         import('pdfjs-dist'),
-        import('pdfjs-dist/build/pdf.worker.mjs?url'),
+        resolvePdfWorkerSrc(),
     ]);
-    pdfjsLib.GlobalWorkerOptions.workerSrc = worker.default;
+    pdfjsLib.GlobalWorkerOptions.workerSrc = workerSrc;
     return pdfjsLib;
 };
 
