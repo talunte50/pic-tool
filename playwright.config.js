@@ -2,7 +2,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 /**
- * Playwright 配置 — ShotEasy 冒烟测试
+ * Playwright 配置 — pic-tool 冒烟测试
  * 本地跑：npx playwright install && npx playwright test
  * CI（GitHub Actions）：见 .github/workflows/ci.yml
  */
